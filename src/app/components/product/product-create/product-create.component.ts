@@ -9,10 +9,8 @@ import { Product } from '../product.model';
   styleUrls: ['./product-create.component.css']
 })
 export class ProductCreateComponent implements OnInit {
-  product: Product = {
-    name: 'Produto de Teste',
-    price: 125.43
-  }
+  product: Product;
+  
   constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {

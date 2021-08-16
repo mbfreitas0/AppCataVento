@@ -1,5 +1,9 @@
 export interface Product {
-    id?: number
-    name: string
-    price: number
+    id?: number,
+    status: string,
+    descricao: string,
+    estoque_min: number,
+    estoque_max: number
+    
 }
+ 

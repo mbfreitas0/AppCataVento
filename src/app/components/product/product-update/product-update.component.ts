@@ -3,13 +3,17 @@ import { ProductService } from '../product.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Product } from '../product.model';
 
+
 @Component({
   selector: 'app-product-update',
   templateUrl: './product-update.component.html',
   styleUrls: ['./product-update.component.css']
 })
+
+
 export class ProductUpdateComponent implements OnInit {
-  product: Product;
+  
+  product: Product = {} as Product;
 
   constructor(
     private productService: ProductService,
@@ -20,6 +24,7 @@ export class ProductUpdateComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.productService.readById(id).subscribe(product => {
         this.product = product;
+        console.log("produto: ",product);
     });
   }
 

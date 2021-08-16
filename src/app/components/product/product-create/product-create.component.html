@@ -1,12 +1,20 @@
 <mat-card>
     <mat-card-title>Novo Produto</mat-card-title>
-    <form>
+    <form *ngIf="product">
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name">
+            <input matInput placeholder="Descrição" [(ngModel)]="product.descricao" name="descricao">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price">
+            <input matInput placeholder="Status A - Ativo ou I - Inativo" [(ngModel)]="product.status" name="status">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Estoque mínimo" [(ngModel)]="product.estoque_min" name="estoque_min">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Estoque máximo" [(ngModel)]="product.estoque_max" name="estoque_max">
         </mat-form-field>
     </form>
 
