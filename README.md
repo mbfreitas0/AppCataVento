@@ -1,42 +1,10 @@
-# serviço
-criar um arquivo db.json 
-{
-  "products": [
-    {
-      "id": 1,
-      "name": "Notebook dell",
-      "price": "5000.89"
-    },
-    {
-      "id": 2,
-      "name": "caneta Bic branca",
-      "price": 5.89
-    },
-    {
-      "id": 3,
-      "name": "Notebook dell",
-      "price": 5.89
-    },
-    {
-      "id": 4,
-      "name": "borracha azul",
-      "price": 5.89
-    },
-    {
-      "id": 5,
-      "name": "Monitor 55",
-      "price": 5.89
-    },
-    {
-      "id": 7,
-      "name": "caneta Bic Preta",
-      "price": 5.89
-    }
-  ]
-}
-adicionar o json-server e executar o comando abaixo: 
-json-server --watch db.json --port 3001
+# Projeto Baseado no "Curso de Angular 9" do Leandro Leitão : https://www.youtube.com/c/COD3RCURSOS
+# https://youtu.be/NCrWXZtlc7Q
 
+# Projeto Clonado do :https://github.com/AndrewMak?tab=repositories
+
+#Backend: https://github.com/Jon-Peppinck
+# 
 
 # crud-angular9
 
