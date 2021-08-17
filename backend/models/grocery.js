@@ -1,9 +1,12 @@
 const db = require('../util/database');
 
 module.exports = class Grocery {
-  constructor(id, item) {
+  constructor(id, status, descricao, estoque_min, estoque_max) {
     this.id = id;
-    this.item = item;
+    this.status = status;
+    this.descricao = descricao;
+    this.estoque_min = estoque_min;
+    this.estoque_max = estoque_max;
   }
 
   static fetchAll() {
@@ -14,7 +17,7 @@ module.exports = class Grocery {
     return db.execute('SELECT * FROM produtos WHERE id = ?', [id]);
   }
 
-  static post(item) {
+  static post(status, descricao, estoque_min, estoque_max) {
     return db.execute('INSERT INTO produtos (status, descricao, estoque_min, estoque_max) VALUES (?, ?, ?, ?)', [status, descricao, estoque_min, estoque_max]);
   }
 

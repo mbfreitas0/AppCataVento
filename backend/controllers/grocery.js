@@ -38,7 +38,7 @@ exports.postGrocery = async (req, res, next) => {
 
 exports.putGrocery = async (req, res, next) => {
   try {
-    const putResponse = await Grocery.update(req.body.id, req.body.item);
+    const putResponse = await Grocery.update(req.body.id, req.body.status, req.body.descricao,req.body.estoque_min, req.body.estoque_min);
     res.status(200).json(putResponse);
   } catch (err) {
     if (!err.statusCode) {
