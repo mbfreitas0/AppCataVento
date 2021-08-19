@@ -35,7 +35,10 @@ import { MatSortModule } from '@angular/material/sort';
 import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
-import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component'
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { StockComponent } from './components/stock/stock/stock.component';
+import { OutputProductComponent } from './components/stock/output-product/output-product.component';
+import { SearchProductComponent } from './components/stock/search-product/search-product.component'
 
 registerLocaleData(localePt)
 @NgModule({
@@ -51,7 +54,10 @@ registerLocaleData(localePt)
     ProductCreateComponent,
     ProductReadComponent,
     ProductUpdateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    StockComponent,
+    OutputProductComponent,
+    SearchProductComponent
   ],
   imports: [
     BrowserModule,

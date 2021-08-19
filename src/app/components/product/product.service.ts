@@ -30,7 +30,7 @@ export class ProductService {
 
   read(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl).pipe(
-      map((obj) => obj),
+      //map((obj) => obj),
       catchError(err => this.errorHandler(err))
     );
   }
@@ -38,7 +38,7 @@ export class ProductService {
   readById(id: String): Observable<Product> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Product>(url).pipe(
-      map((obj) => obj),
+      //map((obj) => obj),
       catchError(err => this.errorHandler(err))
     );
   }
@@ -47,6 +47,7 @@ export class ProductService {
     const url = `${this.baseUrl}/${product.id}`
     return this.http.put<Product>(url, product).pipe(
       map((obj) => obj),
+      
       catchError(err => this.errorHandler(err))
     );
   }

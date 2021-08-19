@@ -1,22 +1,23 @@
 <mat-card >
     <mat-card-title>Alterar Produto</mat-card-title>
     <form *ngIf="product">        
-    <!-- <pre>{{ product | json }}</pre> -->
+    
         <mat-form-field>
-            <input matInput placeholder="Descrição" [(ngModel)]="product[0].descricao" name="descricao">
+            <input matInput placeholder="Descrição" [(ngModel)]="product.descricao" name="descricao">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Status A - Ativo ou I - Inativo" [(ngModel)]="product[0].status" name="status">
+            <input matInput placeholder="Status A - Ativo ou I - Inativo" [(ngModel)]="product.status" name="status">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Estoque mínimo" [(ngModel)]="product[0].estoque_min" name="estoque_min">
+            <input matInput placeholder="Estoque mínimo" [(ngModel)]="product.estoque_min" name="estoque_min">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Estoque máximo" [(ngModel)]="product[0].estoque_max" name="estoque_max">
+            <input matInput placeholder="Estoque máximo" [(ngModel)]="product.estoque_max" name="estoque_max">
         </mat-form-field>
+        <!-- <pre>{{ product | json }}</pre> -->
     </form>
 
     <button mat-raised-button (click)="updateProduct()" color="primary">
