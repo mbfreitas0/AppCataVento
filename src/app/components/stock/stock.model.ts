@@ -3,4 +3,5 @@ export interface Stock {
     id_produto: number,
     qtde: number,
     valor_unitario: number,
+    data_entrada: string
 }

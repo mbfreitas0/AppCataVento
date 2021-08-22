@@ -9,6 +9,7 @@ import { ProductReadComponent } from './components/product/product-read/product-
 import { SearchProductComponent } from './components/stock/search-product/search-product.component';
 import { StockComponent } from './components/stock/stock/stock.component';
 import { OutputProductComponent } from './components/stock/output-product/output-product.component';
+import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
 
 
 const routes: Routes = [
@@ -16,10 +17,11 @@ const routes: Routes = [
   { path: "products", component: ProductCrudComponent },
   { path:'products/create', component: ProductCreateComponent },
   { path:'products/read', component: ProductReadComponent },
+  { path:'products/read2', component: ProductRead2Component },
   { path:'products/update/:id',component: ProductUpdateComponent },
   { path:'products/delete/:id', component: ProductDeleteComponent },
   { path:'products/search-product/', component: SearchProductComponent },
-  { path:'products/stock/:id', component: StockComponent },
+  { path:'products/stock', component: StockComponent },
   { path:'products/output-product/:id', component: OutputProductComponent },
 ];
 

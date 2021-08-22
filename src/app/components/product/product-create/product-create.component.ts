@@ -9,7 +9,7 @@ import { Product } from '../product.model';
   styleUrls: ['./product-create.component.css']
 })
 export class ProductCreateComponent implements OnInit {
-  product: Product;
+  product: Product = {} as Product;
   
   constructor(private productService: ProductService, private router: Router) { }
 
@@ -18,7 +18,7 @@ export class ProductCreateComponent implements OnInit {
 
   createProduct(): void {
     this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage('Produto Criado!')
+      this.productService.showMessage('Produto Criado com Sucesso !!!')
       this.router.navigate(['/products'])
     });
   }

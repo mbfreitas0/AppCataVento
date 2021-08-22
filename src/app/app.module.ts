@@ -21,7 +21,7 @@ import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 
@@ -38,7 +38,8 @@ import { ProductUpdateComponent } from './components/product/product-update/prod
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { StockComponent } from './components/stock/stock/stock.component';
 import { OutputProductComponent } from './components/stock/output-product/output-product.component';
-import { SearchProductComponent } from './components/stock/search-product/search-product.component'
+import { SearchProductComponent } from './components/stock/search-product/search-product.component';
+import { ProductRead2Component } from './components/product/product-read2/product-read2.component'
 
 registerLocaleData(localePt)
 @NgModule({
@@ -57,7 +58,8 @@ registerLocaleData(localePt)
     ProductDeleteComponent,
     StockComponent,
     OutputProductComponent,
-    SearchProductComponent
+    SearchProductComponent,
+    ProductRead2Component
   ],
   imports: [
     BrowserModule,
@@ -75,7 +77,8 @@ registerLocaleData(localePt)
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ReactiveFormsModule
   ],
   providers: [{
     provide: LOCALE_ID,
