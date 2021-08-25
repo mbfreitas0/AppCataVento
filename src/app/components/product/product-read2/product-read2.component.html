@@ -1,10 +1,12 @@
 <h1>Entrada Estoque</h1>
+
 <mat-form-field>
   <mat-label>Filtro</mat-label>
     <input matInput placeholder="Pesquise pelo produto ..." (keyup)="applyFilter($event)">  
-</mat-form-field> 
-<div class="mat-elevation-z8" *ngIf="dataSource.data">
-  <table mat-table [dataSource]="dataSource.data" class="full-width-table" matSort aria-label="Elements">
+</mat-form-field>
+ 
+<div class="mat-elevation-z8" *ngIf="dataSource">
+  <table mat-table [dataSource]="dataSource" class="full-width-table" matSort aria-label="Elements">
     <!-- Id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>

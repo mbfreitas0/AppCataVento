@@ -7,15 +7,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './product-read.component.html',
   styleUrls: ['./product-read.component.css']
 })
-export class ProductReadComponent implements OnInit {
+export class ProductReadComponent implements OnInit {  
 
   products: Product[];
   
   displayedColumns = ['id', 'descricao', 'status', 'estoque_min', 'estoque_max', 'action']
   constructor(private productService: ProductService) { }
 
-  ngOnInit(): void {
-       
+  ngOnInit(): void {       
    
     this.productService.read().subscribe(products => {
       
@@ -24,5 +23,6 @@ export class ProductReadComponent implements OnInit {
       
     })
   }
+  
 
 }
