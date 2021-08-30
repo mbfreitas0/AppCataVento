@@ -10,19 +10,21 @@ import { SearchProductComponent } from './components/stock/search-product/search
 import { StockComponent } from './components/stock/stock/stock.component';
 import { OutputProductComponent } from './components/stock/output-product/output-product.component';
 import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { EntryProductsComponent } from './components/stock/entry-products/entry-products.component';
 
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "products", component: ProductCrudComponent },
-  { path:'products/create', component: ProductCreateComponent },
-  { path:'products/read', component: ProductReadComponent },
-  { path:'products/read2', component: ProductRead2Component },
-  { path:'products/update/:id',component: ProductUpdateComponent },
-  { path:'products/delete/:id', component: ProductDeleteComponent },
-  { path:'products/search-product/', component: SearchProductComponent },
-  { path:'products/stock', component: StockComponent },
-  { path:'products/output-product/:id', component: OutputProductComponent },
+  { path: 'products/create', component: ProductCreateComponent },
+  { path: 'products/read', component: ProductReadComponent },
+  { path: 'products/read2', component: ProductRead2Component },
+  { path: 'products/update/:id', component: ProductUpdateComponent },
+  { path: 'products/delete/:id', component: ProductDeleteComponent },
+  { path: 'products/search-product/', component: SearchProductComponent },
+  { path: 'stock/entry-products/:id', component: EntryProductsComponent},
+  { path: 'stock/:id', component: StockComponent },
+  { path: 'output-product/:id', component: OutputProductComponent }
 ];
 
 @NgModule({

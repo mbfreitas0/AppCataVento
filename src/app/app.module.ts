@@ -39,7 +39,9 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
 import { StockComponent } from './components/stock/stock/stock.component';
 import { OutputProductComponent } from './components/stock/output-product/output-product.component';
 import { SearchProductComponent } from './components/stock/search-product/search-product.component';
-import { ProductRead2Component } from './components/product/product-read2/product-read2.component'
+import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { EntryProductsComponent } from './components/stock/entry-products/entry-products.component';
+
 
 registerLocaleData(localePt)
 @NgModule({
@@ -59,7 +61,9 @@ registerLocaleData(localePt)
     StockComponent,
     OutputProductComponent,
     SearchProductComponent,
-    ProductRead2Component
+    ProductRead2Component,
+    EntryProductsComponent
+    
   ],
   imports: [
     BrowserModule,

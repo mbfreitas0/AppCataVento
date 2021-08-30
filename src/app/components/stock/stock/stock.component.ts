@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 import { Product } from '../../product/product.model';
 import { ProductService } from '../../product/product.service';
 import { Stock } from '../stock.model';
@@ -15,16 +14,25 @@ import { StockService } from '../stock.service';
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
- 
-  
-  constructor(
+
+  product: Product = {} as Product;
+  stock: Stock = {} as Stock;
     
-    private productService: ProductService, 
+  constructor(  
+    private route: ActivatedRoute,
+    private productService: ProductService,
     private stockService: StockService, 
     private router: Router) { }
 
   ngOnInit(): void {
+
+ 
+    
   }
+
+  
+
+  
 
   
 

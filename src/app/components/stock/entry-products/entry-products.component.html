@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-title>Entrada Estoque</mat-card-title>
+    <form *ngIf="stock">
+        <mat-form-field>
+            <input matInput placeholder="ID da Peça" [(ngModel)]="stock.id_produto" name="id_produto">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Quantidade" [(ngModel)]="stock.qtde" name="qtde">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Valor Unitário" [(ngModel)]="stock.valor_unitario" name="estoque_min">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Data de Entrada" [(ngModel)]="stock.data_entrada" name="data_entrada">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createStock()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
