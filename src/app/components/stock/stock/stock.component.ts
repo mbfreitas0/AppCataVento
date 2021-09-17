@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Product } from '../../product/product.model';
@@ -14,28 +17,42 @@ import { StockService } from '../stock.service';
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
+  dataSource: MatTableDataSource<Stock>;
+  //dataSource: MatTableDataSource<Product>;
+  stocks: Stock[];
+  //products: Product[];   
 
-  product: Product = {} as Product;
-  stock: Stock = {} as Stock;
-    
-  constructor(  
-    private route: ActivatedRoute,
-    private productService: ProductService,
-    private stockService: StockService, 
-    private router: Router) { }
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+   
 
-  ngOnInit(): void {
+  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
+  displayedColumns: string[] = ['id', 'qtde','valor_unitario', 'data_entrada','action'];
+  
+  constructor(private stockService: StockService) { }
+  
+  ngOnInit() {
+   
+    this.stockService.read().subscribe(stocks => {      
+      this.stocks = stocks;
+      this.dataSource = new MatTableDataSource(this.stocks);
+      console.log(this.stocks)
+      
+    })
+  }  
 
- 
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
     
   }
 
-  
+  applyFilter(event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 
-  
-
-  
-
-  
 
 }
+
+

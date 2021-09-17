@@ -27,7 +27,8 @@ export class ProductRead2Component implements AfterViewInit, OnInit {
   ngOnInit() {
    
     this.productService.read().subscribe(products => {      
-      this.products = products['produtos'];
+      //this.products = products['produtos'];
+      this.products = products;
       this.dataSource = new MatTableDataSource(this.products);
       console.log(products)
       
@@ -42,7 +43,7 @@ export class ProductRead2Component implements AfterViewInit, OnInit {
 
   applyFilter(event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.dataSource.filter = filterValue.trim().toUpperCase();
   }
 
 
