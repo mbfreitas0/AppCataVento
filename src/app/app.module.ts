@@ -41,6 +41,7 @@ import { OutputProductComponent } from './components/stock/output-product/output
 import { SearchProductComponent } from './components/stock/search-product/search-product.component';
 import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
 import { EntryProductsComponent } from './components/stock/entry-products/entry-products.component';
+import { StockReadComponent } from './components/stock/stock-read/stock-read.component';
 
 
 registerLocaleData(localePt)
@@ -62,7 +63,8 @@ registerLocaleData(localePt)
     OutputProductComponent,
     SearchProductComponent,
     ProductRead2Component,
-    EntryProductsComponent
+    EntryProductsComponent,
+    StockReadComponent
     
   ],
   imports: [

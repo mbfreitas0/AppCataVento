@@ -7,11 +7,10 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { SearchProductComponent } from './components/stock/search-product/search-product.component';
-import { StockComponent } from './components/stock/stock/stock.component';
+import { StockReadComponent } from './components/stock/stock-read/stock-read.component';
 import { OutputProductComponent } from './components/stock/output-product/output-product.component';
 import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
 import { EntryProductsComponent } from './components/stock/entry-products/entry-products.component';
-
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -23,7 +22,7 @@ const routes: Routes = [
   { path: 'products/delete/:id', component: ProductDeleteComponent },
   { path: 'products/search-product/', component: SearchProductComponent },
   { path: 'stock/entry-products/:id', component: EntryProductsComponent},
-  { path: 'stock/:id', component: StockComponent },
+  { path: 'stock/stock-read', component: StockReadComponent },
   { path: 'output-product/:id', component: OutputProductComponent }
 ];
 
