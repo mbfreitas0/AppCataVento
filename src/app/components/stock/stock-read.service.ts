@@ -9,7 +9,7 @@ import { Observable, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class StockReadService {
-  baseUrl = 'http://localhost:3000/stock'
+  baseUrl = 'http://localhost:3000/stocks'
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {
   }
 

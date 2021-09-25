@@ -22,20 +22,16 @@ export class EntryProductsComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id_product = this.route.snapshot.paramMap.get('id');
-    this.stockService.readById(id_product).subscribe(stock => {
-        this.stock = stock;
-        console.log("peça: ", stock);
-    });
     const id = this.route.snapshot.paramMap.get('id');
     this.productService.readById(id).subscribe(product => {
         this.product = product;
-        console.log("produto: ", product);
+        console.log("peça: ", product);
     });
+        
   }
 
   createStock(): void {
-    this.stockService.update(this.stock).subscribe(() => {
+    this.stockService.create(this.stock).subscribe(() => {
       this.stockService.showMessage('Entrada efetuada com sucesso !!!')
       this.router.navigate(['products/read2'])
     });

@@ -4,4 +4,6 @@ export interface StockRead {
     descricao?: string,
     qtde: number,
     valor_unitario: number
+    createdAt?: string,
+    updatedAt?: string
 }

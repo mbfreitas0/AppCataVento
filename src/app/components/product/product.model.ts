@@ -3,7 +3,9 @@ export interface Product {
     status: string,
     descricao: string,
     estoque_min: number,
-    estoque_max: number
+    estoque_max: number,
+    createdAt?: string,
+    updatedAt?: string,
     
 }
  

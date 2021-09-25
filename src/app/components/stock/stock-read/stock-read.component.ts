@@ -24,7 +24,7 @@ export class StockReadComponent implements OnInit {
 
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns: string[] = ['id', 'descricao', 'qtde', 'valor_unitario', 'action'];
+  displayedColumns: string[] = ['id_produto', 'descricao', 'qtde', 'valor_unitario', 'action'];
 
   constructor(
     private productService: ProductService,
